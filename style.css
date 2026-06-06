@@ -1035,4 +1035,36 @@ section {
 iframe {
     width: 100% !important;
     display: block !important;
+} 
+* {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+.hero button,
+.hero .btn {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+section {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.about-section,
+.about-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .about-section,
+    .about-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
