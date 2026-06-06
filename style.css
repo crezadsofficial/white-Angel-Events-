@@ -335,13 +335,7 @@ i {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        180deg,
-        rgba(10, 10, 10, 0.7) 0%,
-        rgba(10, 10, 10, 0.5) 50%,
-        rgba(10, 10, 10, 0.9) 100%
-    );
-    z-index: 2;
+    background: rgba(0,0,0,0.45);
 }
 
 .hero::before {
@@ -353,7 +347,7 @@ i {
     height: 100%;
     background: url('hero banner.png') center/cover no-repeat;
     z-index: 0;
-    opacity: 0.4;
+    opacity: 0.8;
     animation: heroZoom 20s infinite alternate;
 }
 
