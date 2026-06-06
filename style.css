@@ -256,55 +256,7 @@ i {
     color: var(--primary-gold);
 }
 
-.nav-links {
-    display: flex;
-    gap: 40px;
-}
 
-.nav-links li a {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    padding: 10px 0;
-}
-
-.nav-links li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--gradient-gold);
-    transition: var(--transition-medium);
-}
-
-.nav-links li a:hover::after,
-.nav-links li a.active::after {
-    width: 100%;
-}
-
-.nav-links li a:hover {
-    color: var(--primary-gold);
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger i {
-    font-size: 28px;
-    color: var(--text-primary);
-    transition: var(--transition-medium);
-}
-
-.hamburger:hover i {
-    color: var(--primary-gold);
-}
 
 /* ========================================= 
    HERO SECTION 
@@ -998,5 +950,49 @@ i {
 
     .nav-menu.active {
         display: flex;
+    }
+}
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--primary-gold);
+    z-index: 1002;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+@media (max-width: 992px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        background: var(--bg-dark);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.4s ease;
+        z-index: 1001;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        color: white;
     }
 }
