@@ -996,3 +996,43 @@ i {
         color: white;
     }
 }
+/* ===== SAFE RESET FIX ===== */
+
+section {
+    display: block;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* HERO BUTTON FIX */
+.hero .btn,
+.hero button {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ABOUT SECTION FIX */
+.about-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .hero-content {
+        display: block !important;
+    }
+}
+
+/* MAP SAFE FIX */
+iframe {
+    width: 100% !important;
+    display: block !important;
+}
