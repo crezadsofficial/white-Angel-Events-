@@ -1024,3 +1024,59 @@ i {
         flex-direction:column !important;
     }
 }
+/* =======================
+   MOBILE RESPONSIVE FIX
+======================= */
+
+@media (max-width: 768px) {
+
+  /* ===== NAVBAR FIX ===== */
+  nav {
+    flex-wrap: wrap;   /* items wrap ho jayenge */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;  /* menu vertical */
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    font-size: 16px;     /* text cut nahi hoga */
+    white-space: normal; /* wrapping allow */
+  }
+
+  /* agar logo + text cut ho raha hai */
+  .navbar, header {
+    flex-wrap: wrap;
+  }
+
+
+  /* ===== ABOUT SECTION FIX ===== */
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr !important; /* 1 column */
+    gap: 20px;
+  }
+
+  .vision,
+  .mission,
+  .why-choose {
+    width: 100%;
+  }
+
+  /* agar flex use kiya hai */
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
