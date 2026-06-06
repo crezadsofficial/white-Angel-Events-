@@ -678,6 +678,75 @@ i {
     transform: translateY(0);
 }
 
+/* ===== Gallery Section ===== */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:40px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.gallery-item img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+    transition:0.4s;
+}
+
+.gallery-item img:hover{
+    transform:scale(1.05);
+}
+
+@media(max-width:768px){
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-item img{
+        height:220px;
+    }
+}
+
+@media(max-width:480px){
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ===== WhatsApp Button ===== */
+
+.whatsapp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    text-align:center;
+    font-size:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    z-index:9999;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
 /* ========================================= 
    FEATURES SECTION 
    ========================================= */
@@ -693,4 +762,5 @@ i {
 
 .feature-box {
     background: var(--bg-card);
-    padding: 40px
+    padding: 40px;
+}
