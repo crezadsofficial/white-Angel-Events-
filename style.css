@@ -601,82 +601,151 @@ i {
 /* ========================================= 
    SERVICES SECTION 
    ========================================= */
+.service-card {
+    background: rgba(255,255,255,0.05);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-light);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.1);
+    border-color: var(--secondary-color);
+}
+
+.service-icon-box {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    transition: var(--transition);
+}
+
+.service-card:hover .icon-box {
+    transform: scale(1.1);
+    background: #fff;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
 }
 
-.service-card {
+/* --- STATS SECTION --- */
+.stats-section {
+    padding: 70px 0;
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* --- FEATURES / WHY CHOOSE --- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+
+/* --- PROCESS --- */
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    height: 350px;
-    cursor: pointer;
 }
 
-.service-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition-slow);
+.process-step {
+    text-align: center;
+    position: relative;
 }
 
-.service-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        180deg,
-        rgba(10, 10, 10, 0) 30%,
-        rgba(10, 10, 10, 0.9) 100%
-    );
-    transition: var(--transition-medium);
-}
-
-.service-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    z-index: 2;
-    transform: translateY(20px);
-    transition: var(--transition-medium);
-}
-
-.service-info h3 {
-    font-size: 22px;
-    color: var(--text-primary);
+.step-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(212, 175, 55, 0.15);
+    font-family: var(--font-heading);
+    line-height: 1;
     margin-bottom: 10px;
-    transform: translateX(0);
-    transition: var(--transition-medium);
 }
 
-.service-info p {
-    font-size: 14px;
-    color: var(--accent-gray);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: var(--transition-medium);
+.process-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
-.service-card:hover img {
-    transform: scale(1.2);
-    filter: brightness(0.7);
+.process-step p {
+    color: #666;
+    font-size: 0.9rem;
 }
 
-.service-card:hover .service-info {
-    transform: translateY(0);
-}
-
-.service-card:hover .service-info p {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* ===== Gallery Section ===== */
 
