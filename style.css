@@ -1042,3 +1042,61 @@ nav ul li a {
   }
 
 }
+/* Hero Premium */
+
+.hero-content h1{
+    font-size:5rem;
+    text-shadow:0 8px 30px rgba(0,0,0,0.4);
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .about-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+        display: none;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
