@@ -941,3 +941,86 @@ i {
         grid-template-columns: 1fr;
     }
 }
+/* ===== MOBILE FINAL FIX ===== */
+
+@media (max-width:768px){
+
+    /* Hero Stats */
+    .hero-stats{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        gap:20px !important;
+        position:static !important;
+        margin-top:40px !important;
+    }
+
+    .stat-item{
+        width:100%;
+        text-align:center;
+    }
+
+    /* Vision / Why Choose Us */
+    .features-grid,
+    .vision-grid,
+    .why-choose-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:20px !important;
+    }
+
+    .feature-box,
+    .vision-card,
+    .choose-card{
+        width:100% !important;
+    }
+
+    /* Working Process */
+    .process-timeline{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:20px !important;
+    }
+
+    .process-item{
+        width:100% !important;
+        background:#151515;
+        padding:20px;
+        border-radius:15px;
+        border:1px solid rgba(212,175,55,0.3);
+    }
+
+    /* Services */
+    .services-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:20px !important;
+    }
+
+    .service-card{
+        width:100% !important;
+    }
+
+    /* Gallery */
+    .gallery-grid{
+        display:grid !important;
+        grid-template-columns:1fr 1fr !important;
+        gap:10px !important;
+    }
+
+    .gallery-item{
+        height:180px !important;
+    }
+
+    .gallery-item img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    /* Contact */
+    .contact-wrapper{
+        display:flex !important;
+        flex-direction:column !important;
+    }
+}
