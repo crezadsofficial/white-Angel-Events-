@@ -1302,17 +1302,3 @@ style.textContent = `
             font-size: 18px;
         }
     }
-`;
-
-body.appendChild(style);
-
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const icon = document.querySelector('.hamburger i');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-times');
-});
